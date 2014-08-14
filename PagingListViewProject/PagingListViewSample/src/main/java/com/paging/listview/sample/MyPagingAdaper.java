@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.paging.listview.PagingBaseAdapter;
+import com.paging.listview.adapter.PagingBaseAdapter;
 
 
 public class MyPagingAdaper extends PagingBaseAdapter<String> {

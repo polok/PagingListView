@@ -1,4 +1,4 @@
-package com.paging.listview;
+package com.paging.listview.adapter;
 
 import android.widget.BaseAdapter;
 
@@ -27,6 +27,4 @@ public abstract class PagingBaseAdapter<T> extends BaseAdapter {
 		this.items.clear();
 		notifyDataSetChanged();
 	}
-
-
 }

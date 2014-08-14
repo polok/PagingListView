@@ -7,6 +7,8 @@ import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.paging.listview.adapter.PagingBaseAdapter;
+
 import java.util.List;
 
 
@@ -67,7 +69,7 @@ public class PagingListView extends ListView {
 		setIsLoading(false);
 		if(newItems != null && newItems.size() > 0) {
 			ListAdapter adapter = ((HeaderViewListAdapter)getAdapter()).getWrappedAdapter();
-			if(adapter instanceof PagingBaseAdapter ) {
+			if(adapter instanceof PagingBaseAdapter) {
 				((PagingBaseAdapter)adapter).addMoreItems(newItems);
 			}
 		}

@@ -5,11 +5,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.HeaderViewListAdapter;
-import android.widget.ListAdapter;
 
-import com.paging.listview.PagingBaseAdapter;
 import com.paging.listview.PagingListView;
 
 import java.util.ArrayList;
