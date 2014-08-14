@@ -1,22 +1,13 @@
 PagingListView
 ==============
-
-PagingListView has the ability to add more items on it like Gmail does. Basically is a ListView with the ability to add more items on it when reaches the end of the list.<br>
+This is an extension to PagingListView which was created by Nicolas Jafelle. This extension add the ability to use pagination also for expandable list views.<br>
+Basically is a ListView with the ability to add more items on it when reaches the end of the list.<br>
 While "pull to refresh" pattern works at the top of the List and show the latest added items, the PagingListView works at the bottom of the List and shows the first added items.﻿
 
-Instructions - Maven Central
+Instructions
 ============
 
-1. Add this library in your build.gradle:
-
-```groovy
-dependencies {
-    compile 'com.github.nicolasjafelle:paginglistview:1.1'
-}
-```
-
-Instructions 1
-============
+Add this library in your build.gradle:
 
 1. Clone the git repo
 2. Import the "PagingListView" module into your Android-gradle project.
@@ -24,18 +15,10 @@ Instructions 1
 4. DONE
 
 
-Instructions 2
-============
-
-1. Add Nicolas Jafelle's Maven repo to your build.gradle: <a href="https://github.com/nicolasjafelle/maven-repo">Instructions</a>
-2. Add this dependency: `com.paginglistview:paging-listview:1.0`
-3. DONE
-
-
 How to Use it
 ================
 
-Simple create your PagingAdapter and add it to com.paging.listview.PagingListView.<br>
+Simple create your PagingAdapter (for ListView) or PagingExpandableAdapter (for ExpandableListView) and add it to com.paging.listview.PagingListView/PagingExpandableListView.<br>
 You have to implements the new Pagingable interface and its onLoadMoreItems() method. For example:<br>
 ``` java
 listView.setHasMoreItems(true);
@@ -55,7 +38,7 @@ Finally you can use the onFinishLoading(boolean hasMoreItems, List newItems) met
 ``` java
 listView.onFinishLoading(true, newItems);
 ```
-Also remember to use this package in your layout files: 
+Also remember to use this package in your layout files (for ListView): 
 
 ```xml
 <com.paging.listview.PagingListView
@@ -64,10 +47,20 @@ Also remember to use this package in your layout files:
 	android:layout_height="match_parent"/>
 ```
 
+For expandable list:
+
+```xml
+<com.paging.listview.PagingExpandableListView
+	android:id="@+id/expandable_paging_list_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"/>
+```
+
 Developed By
 ================
 
 * Nicolas Jafelle - <nicolasjafelle@gmail.com>
+* Marcin Polak (added above extension for expandable list)
 
 
 License
