@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.HeaderViewListAdapter;
 
-import com.paging.listview.PagingListView;
+import com.paging.listview.ui.PagingListView;
 
 import java.util.ArrayList;
 import java.util.List;

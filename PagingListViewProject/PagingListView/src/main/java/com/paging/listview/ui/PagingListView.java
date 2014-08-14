@@ -1,4 +1,4 @@
-package com.paging.listview;
+package com.paging.listview.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,21 +7,19 @@ import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.paging.listview.adapter.PagingBaseAdapter;
+import com.paging.listview.ui.components.DefaultLoadingView;
+import com.paging.listview.interfaces.Pagingable;
+import com.paging.listview.adapters.PagingBaseAdapter;
 
 import java.util.List;
 
 
 public class PagingListView extends ListView {
 
-	public interface Pagingable {
-		void onLoadMoreItems();
-	}
-
 	private boolean isLoading;
 	private boolean hasMoreItems;
 	private Pagingable pagingableListener;
-	private LoadingView loadinView;
+	private DefaultLoadingView loadinView;
 
     private OnScrollListener onScrollListener;
 
@@ -78,7 +76,7 @@ public class PagingListView extends ListView {
 
 	private void init() {
 		isLoading = false;
-		loadinView = new LoadingView(getContext());
+		loadinView = new DefaultLoadingView(getContext());
 		addFooterView(loadinView);
 		super.setOnScrollListener(new OnScrollListener() {
             @Override

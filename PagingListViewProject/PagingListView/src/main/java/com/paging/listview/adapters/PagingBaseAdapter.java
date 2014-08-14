@@ -1,4 +1,4 @@
-package com.paging.listview.adapter;
+package com.paging.listview.adapters;
 
 import android.widget.BaseAdapter;
 
