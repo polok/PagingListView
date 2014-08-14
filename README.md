@@ -1,4 +1,4 @@
-PagingListView
+PagingListView and PagingExpandableListView
 ==============
 This is an extension to PagingListView which was created by Nicolas Jafelle. This extension add the ability to use pagination also for expandable list views.<br>
 Basically is a ListView with the ability to add more items on it when reaches the end of the list.<br>
@@ -60,7 +60,7 @@ Developed By
 ================
 
 * Nicolas Jafelle - <nicolasjafelle@gmail.com>
-* Marcin Polak (added above extension for expandable list)
+* Marcin Polak (added above extension for expandable list support)
 
 
 License
